@@ -10,7 +10,7 @@ settings.py
 
 # Distribution / packaging
 .Python
-env/
+myvenv/
 build/
 develop-eggs/
 dist/
