@@ -64,12 +64,13 @@
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
-                  <form class="" action={%url mysite.views.home_search%} method="post">
+                  <form class="" action="{%url 'home_search'%}" method="post">
                     {% csrf_token %}
                     <input type="text" name="search_term" value="">
+                    <!-- {{form}} -->
                   </form>
 
-                      <span class="input-group-btn"><button href="" type="submit" class="btn btn-primary btn-form display-4"> search for da jam </button></span>
+                      <span class="input-group-btn"><button href="{%url 'home_search' %}" type="submit" class="btn btn-primary btn-form display-4"> search for da jam </button></span>
                     {% block content %}
 
                     {% endblock %}
