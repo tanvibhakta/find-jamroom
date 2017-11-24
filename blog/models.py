@@ -13,6 +13,7 @@ class Jamroom(models.Model):
     name = models.CharField(max_length=50)
     location = models.TextField()
     price_per_hour = models.DecimalField(max_digits=6, decimal_places=2)
+    # operating_hours = models.ForeignKey(OperatingHours)
 
 class OperatingHours(models.Model):
     """docstring for Operating_hours."""
