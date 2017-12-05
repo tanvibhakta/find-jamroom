@@ -30,8 +30,8 @@ def home_search(request):
 def list_all():
     return render( 'blog/list_all.html')
 
-def book():
-    return render('blog/book.html')
+def book(request):
+    return render(request, template_name='blog/book.html')
 
 def booking_confirmed(request):
     return render(request, 'blog/booking_confirmed.html')
