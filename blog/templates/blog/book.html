@@ -8,16 +8,14 @@
     </head>
     <body>
         <div class="page-header">
-            <center><h1><a href="/">Confirm Booking</a></h1></center>
+            <center><h1><a href="/">Book the room?</a></h1></center>
         </div>
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
                   <form class="" action="{%url 'booking_confirmed' %}" method="post">
                     {% csrf_token %}
-                    <input type="text" name="search_term" value="">
-                      <span class="input-group-btn">
-                        <button href="{%url 'home_search' %}" type="submit" class="btn btn-primary btn-form display-4">Find!</button>
+                    <input type="text" name="search_term" value="" placeholder="yes/no">
                       </span>
                     </center>
                   </form>
