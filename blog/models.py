@@ -16,7 +16,7 @@ class Jamroom(models.Model):
     name = models.CharField(max_length=100)
     location = models.TextField()
     price_per_hour = models.DecimalField(max_digits=6, decimal_places=2)
-    owner_id = models.ForeignKey(Owner)
+    owner_id = models.ForeignKey(Owner, on_delete=models.CASCADE)
     # operating_hours = models.ForeignKey(OperatingHours)
 
     def __str__(self):
@@ -24,7 +24,7 @@ class Jamroom(models.Model):
 
 class OperatingHours(models.Model):
     """docstring for Operating_hours."""
-    jamroom_id = models.ForeignKey(Jamroom)
+    jamroom_id = models.ForeignKey(Jamroom, on_delete=models.CASCADE)
     # 0 = Sunday, 6 = Saturday
     weekday = models.IntegerField()
     start_hour = models.TimeField(auto_now=False, auto_now_add=False)
@@ -43,8 +43,8 @@ class Customer(models.Model):
 
 class Booking(models.Model):
     """docstring for Booking."""
-    customer_id = models.ForeignKey(Customer)
-    jamroom_id = models.ForeignKey(Jamroom)
+    customer_id = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    jamroom_id = models.ForeignKey(Jamroom, on_delete=models.CASCADE)
     booked_time_slot = models.TimeField(auto_now=False, auto_now_add=False)
 
     def __str__(self):
