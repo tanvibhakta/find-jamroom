@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Find a Jamroom</title>
+        <title>Confirm booking</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -8,14 +8,12 @@
     </head>
     <body>
         <div class="page-header">
-            <center><h1><a href="/">Find a Jamroom</a></h1></center>
-            <!-- <a href="{% url 'home_search' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a> -->
-
+            <center><h1><a href="/">Confirm Booking</a></h1></center>
         </div>
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
-                  <form class="" action="{%url 'home_search' %}" method="post">
+                  <form class="" action="{%url 'booking_confirmed' %}" method="post">
                     {% csrf_token %}
                     <input type="text" name="search_term" value="">
                       <span class="input-group-btn">

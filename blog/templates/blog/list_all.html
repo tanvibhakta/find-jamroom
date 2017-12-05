@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Result</title>
+    <title>All Jamrooms</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -11,6 +11,9 @@
 </head>
 
 <body>
+  <div class="page-header">
+      <center><h1><a href="/">All Jamrooms</a></h1></center>
+  </div>
   <div class="container">
 
 <table class="table isSearch" cellspacing="0">
@@ -20,6 +23,7 @@
       <th class="head-item mbr-fonts-style display-7">location</th>
       <th class="head-item mbr-fonts-style display-7">Price per hour</th>
       <th class="head-item mbr-fonts-style display-7">Owner name</th>
+      <th class="head-item mbr-fonts-style display-7">Owner Phone Number</th>
     </tr>
   </thead>
 
@@ -33,11 +37,6 @@
         <td class="body-item mbr-fonts-style display-7">{{owner.owner_name}}</td>
         <td class="body-item mbr-fonts-style display-7">{{owner.owner_ph_no}}</td>
       {% endfor %}
-      <td class="body-item mbr-fonts-style display-7">
-        <span class="input-group-btn">
-            <button href="{%url 'book' %}" type="submit" class="btn btn-primary btn-form display-7">Book!</button>
-          </span>
-        </td>
     </tr>
     {% endfor %}
     </tbody>
