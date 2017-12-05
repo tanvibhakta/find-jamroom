@@ -31,7 +31,8 @@ def list_all():
     return render( 'blog/list_all.html')
 
 def book(request):
-    return render(request, template_name='blog/book.html')
+    print("shbd")
+    return render(request, 'blog/book.html')
 
 def booking_confirmed(request):
     return render(request, 'blog/booking_confirmed.html')
