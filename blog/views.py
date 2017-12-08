@@ -35,4 +35,13 @@ def book(request):
     return render(request, 'blog/book.html')
 
 def booking_confirmed(request):
+    # if request.method == "POST":
+    #     customer = Customer.objects.filter
+
+
     return render(request, 'blog/booking_confirmed.html')
+
+    # else:
+    #     print("get triggered")
+    #     MyHomeSearchForm = HomeSearchForm()
+    #     return render(request, 'blog/home_search.html', {"MyHomeSearchForm" : MyHomeSearchForm})

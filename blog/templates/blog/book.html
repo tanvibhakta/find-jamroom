@@ -13,9 +13,10 @@
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
+                  <h4>Enter Customer details</h4>
                   <form class="" action="{%url 'booking_confirmed' %}" method="post">
                     {% csrf_token %}
-                    <input type="text" name="search_term" value="" placeholder="yes/no">
+                    <input type="text" name="customer_name" value="" placeholder="Name">
                       </span>
                     </center>
                   </form>
